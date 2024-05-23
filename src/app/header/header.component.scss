@@ -1,0 +1,53 @@
+.header_sec{
+
+    background: #fff;
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 5px #b0afaf;
+
+    img {
+        width: 250px;
+        object-fit: cover;
+    }
+    
+    button {
+        height: 30px;
+        width: 100px;
+        background: blue;
+        color: #fff;
+        border-color: blue;
+        border-width: 0;
+        border-radius: 7px;
+    }
+}
+
+@mixin btn($color, $value){
+    padding: 5px 15px;
+    @if($value > 10){
+        $color:skyblue;
+    }
+    color: $color;
+}
+
+// .btn{
+//     &.primary{
+//     @include btn(#fff, 4);
+//     background: #000;
+//    }
+// }
+
+// @function cartColor ($value){
+//     @if($value > 35){
+//         @return red;
+//     }@else{
+//         @return green;
+//     }
+// }
+
+// .btn{
+//   background-color: cartColor(35);
+//   &.primary{
+//   background-color: cartColor(50)
+//   }
+// }

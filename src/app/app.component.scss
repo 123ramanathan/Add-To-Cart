@@ -1,0 +1,19 @@
+// $accen:(
+//     'primary':blue,
+//     'success':green,
+//     'warning':orange,
+// );
+
+// .p{
+//     color: map-get($accen,'primary');
+// }
+
+// .a{
+//     .b{
+//         @at-root{
+//             .c{
+//                 color: map-get($accen,'success');
+//             }
+//         }
+//     }
+// }

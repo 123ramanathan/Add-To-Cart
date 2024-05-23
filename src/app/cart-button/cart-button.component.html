@@ -1,0 +1,8 @@
+<div>
+    <button *ngIf="!cart_data.qty" (click)="add_cart()">Add To Cart</button>
+    <div *ngIf="cart_data.qty" class="d__flex gap-10">
+        <button (click)="update_cart(cart_data, 'reduce')">-</button>
+        <p class="m-0">{{cart_data.qty}}</p>
+        <button (click)="update_cart(cart_data, 'add')">+</button>
+    </div>
+</div>

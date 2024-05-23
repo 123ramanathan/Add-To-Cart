@@ -1,0 +1,33 @@
+<div class="add_product">
+    <div class="d__flex just-s header">
+        <p class="m-0 fnt-16">Add Your Product</p>
+        <i class="bi bi-x-lg mouse" (click)="close_dialog()"></i>
+    </div>
+
+    <div class="form_">
+        <p>Add Image</p>
+        <div class="d__flex gap-20 mb-10">
+            <div class="d__flex gap-10 attach_file mouse" (click)="file_input.click()">
+                <input class="display_none" #file_input type="file" (change)="onFileSelected($event)">
+                <i class="bi bi-paperclip"></i>
+                <p class="m-0 fnt-14">Attach your file</p>
+            </div>
+            <img [src]="base64String" *ngIf="base64String">
+        </div>
+
+        <div class="title">
+            <p>Title</p>
+            <textarea></textarea>
+        </div>
+
+        <div class="description">
+            <p>Description</p>
+            <textarea></textarea>
+        </div>
+
+    </div>
+</div>
+
+<div class="save_product">
+    <button (click)="add_product()">+ Add Product</button>
+</div>
