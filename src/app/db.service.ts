@@ -11,6 +11,7 @@ export class DbService {
   cart_datas : any = []
   update_cart_datas = new Subject();
   cart_button_increase = false
+  new_products: any = [];
 
   constructor(private http: HttpClient) {
     this.domainUrl = 'http://localhost:4200'
@@ -25,6 +26,16 @@ export class DbService {
       this.cart_datas = JSON.parse(localStorage['cart_items']) 
     }else{
       this.cart_datas = []
+    }
+  }
+
+  get_new_product(){
+    if(localStorage['new_products']){
+      this.new_products = JSON.parse(localStorage['new_products'])
+
+      this.product_data = [...this.product_data,...this.new_products]
+    }else{
+      this.new_products = []
     }
   }
 

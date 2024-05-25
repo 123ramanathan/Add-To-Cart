@@ -15,14 +15,19 @@
             <img [src]="base64String" *ngIf="base64String">
         </div>
 
-        <div class="title">
+        <div class="title mb-10">
             <p>Title</p>
-            <textarea></textarea>
+            <textarea [(ngModel)]="title"></textarea>
+        </div>
+
+        <div class="description mb-10">
+            <p>Description</p>
+            <textarea [(ngModel)]="description"></textarea>
         </div>
 
         <div class="description">
-            <p>Description</p>
-            <textarea></textarea>
+            <p>Price</p>
+            <input type="number" [(ngModel)]="price">
         </div>
 
     </div>

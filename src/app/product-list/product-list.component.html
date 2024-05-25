@@ -1,5 +1,5 @@
-<div class="product_list" *ngIf="product_data && product_data.length != 0">
-    <div *ngFor="let item of product_data; let i = index" class="p-10 product_box">
+<div class="product_list" *ngIf="db.product_data && db.product_data.length != 0">
+    <div *ngFor="let item of db.product_data; let i = index" class="p-10 product_box">
         <div class="text-c">
             <img [src]="item.image" alt="no img">
         </div>
@@ -7,7 +7,7 @@
         <p class="m-0 mb-10">{{item.price}}</p>
         <p class="m-0 mb-10 desc webkit-text" style="--line: 2">{{item.description}}</p>
         <div class="cart_btn">
-            <app-cart-button [cart_qty]="db.cart_datas" [all_product]="product_data" [cart_data]="item" (add_to_cart)="db.add_to_cart($event,'add')"></app-cart-button>
+            <app-cart-button [cart_qty]="db.cart_datas" [all_product]="db.product_data" [cart_data]="item" (add_to_cart)="db.add_to_cart($event,'add')"></app-cart-button>
         </div>
     </div>
 </div>

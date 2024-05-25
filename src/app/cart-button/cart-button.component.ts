@@ -1,10 +1,22 @@
 import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { DbService } from '../db.service';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-cart-button',
   templateUrl: './cart-button.component.html',
-  styleUrls: ['./cart-button.component.scss']
+  styleUrls: ['./cart-button.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('1s', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('1s', style({ opacity: 0 })),
+      ]),
+    ]),
+  ]
 })
 export class CartButtonComponent implements OnInit {
 @Output() add_to_cart = new EventEmitter();

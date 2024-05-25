@@ -14,6 +14,7 @@ import { ListComponent } from './list/list.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,10 +33,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  exports: [CartButtonComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
